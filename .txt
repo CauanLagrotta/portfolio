@@ -9,6 +9,7 @@ font awesome (redes sociais) - https://fontawesome.com/search?q=gmail&o=r
 
 cores
 #0d0e0e - background preto
+#1b235b - background header azul escuro
 #0e76ae - textos azuis
 #fff - texto branco e hover do github
 #0e76a8 - hover do linkedin
