@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { ContainerHeader, Logo, ContainerLinks, Link, MenuButton, SideBar, SideBarOpen, Close } from "./components";
-import { Home } from "../home/home";
-import { About } from "../about/about";
-import { Projects } from "../projects/projects";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
