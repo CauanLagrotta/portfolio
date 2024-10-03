@@ -1,7 +1,9 @@
+import { ContainerFooter } from "./components"
+
 export function Footer(){
     return(
-        <div>
-            
-        </div>
+        <ContainerFooter>
+            <h1>Footer</h1>
+        </ContainerFooter>
     )
 }

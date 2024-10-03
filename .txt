@@ -1,8 +1,8 @@
 bibliotecas
 Framer motion - https://www.framer.com/motion/
 Animate on scroll - https://michalsnik.github.io/aos/
-Material ui - https://mui.com/material-ui/react-card/
-Styled-components - https://styled-components.com
+Material ui - https://mui.com/material-ui/react-card/ ---
+Styled-components - https://styled-components.com ---
 
 icones
 font awesome (redes sociais) - https://fontawesome.com/search?q=gmail&o=r

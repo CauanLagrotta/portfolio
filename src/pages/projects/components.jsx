@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const ContainerFooter = styled.div({
+const ContainerProjects = styled.div({
     width: "100vw",
-    height: "100px",
-    backgroundColor: "#1b235b",
+    height: "100vh",
+    backgroundColor: "blue",
     color: "#fff",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
 });
 
-export { ContainerFooter }
+export { ContainerProjects }

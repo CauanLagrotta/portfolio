@@ -9,7 +9,7 @@ import "./App.css"
 export function App() {
     return (
         <div>
-            <Header/>
+            <Header />
             <Home />
             <About />
             <Projects />

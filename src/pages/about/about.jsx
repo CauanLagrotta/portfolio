@@ -1,7 +1,9 @@
+import { ContainerAbout } from "./components"
+
 export function About(){
     return(
-        <div>
-            
-        </div>
+        <ContainerAbout id="about">
+            <h1>About</h1>
+        </ContainerAbout>
     )
 }

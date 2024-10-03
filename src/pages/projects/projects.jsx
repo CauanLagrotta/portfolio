@@ -1,7 +1,9 @@
+import { ContainerProjects } from "./components";
+
 export function Projects(){
     return(
-        <div>
-            
-        </div>
+        <ContainerProjects id="projects">
+            <h1>Projects</h1>
+        </ContainerProjects>
     )
 }

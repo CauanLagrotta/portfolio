@@ -1,23 +1,46 @@
-import { Container, Logo, ContainerLinks, Link  } from "./components"
-import { Home } from "../home/home"
-import { About } from "../about/about"
-import { Projects } from "../projects/projects"
+import { useState } from "react";
+import { ContainerHeader, Logo, ContainerLinks, Link, MenuButton, SideBar, SideBarOpen, Close } from "./components";
+import { Home } from "../home/home";
+import { About } from "../about/about";
+import { Projects } from "../projects/projects";
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
-export function Header(){
-    return(
-        
-        <Container>
-            <a href={Home}>
-                <Logo src="./images/header.png"/>
-            </a>
-            
 
-            <ContainerLinks>
-                <Link href={Home}> Home </Link>
-                <Link href={About}> Sobre mim </Link>
-                <Link href={Projects}> Projetos </Link>
-            </ContainerLinks>
-        </Container>
-        
-    )
+export function Header() {
+  const [open, setOpen] = useState(false);
+
+  const toggleSideBar = () => {
+    setOpen(!open); 
+  };
+
+  return (
+    <ContainerHeader>
+      <a href="#home">
+        <Logo src="./images/header.png" />
+      </a>
+
+
+      <ContainerLinks>
+        <Link href="#home"> Home </Link>
+        <Link href="#about"> Sobre mim </Link>
+        <Link href="#projects"> Projetos </Link>
+      </ContainerLinks>
+
+      <MenuButton onClick={toggleSideBar}>
+        {open ? <CloseIcon /> : <MenuIcon />} 
+      </MenuButton>
+
+      {open ? (
+        <SideBarOpen>
+          <Close onClick={toggleSideBar} />
+          <Link href="#home" onClick={toggleSideBar}> Home </Link>
+          <Link href="#about" onClick={toggleSideBar}> Sobre mim </Link>
+          <Link href="#projects" onClick={toggleSideBar}> Projetos </Link>
+        </SideBarOpen>
+      ) : (
+        <SideBar />
+      )}
+    </ContainerHeader>
+  );
 }
