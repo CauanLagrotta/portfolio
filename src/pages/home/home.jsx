@@ -1,9 +1,27 @@
+import { useState, useEffect } from "react"
 import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom, TechsDiv, Techs } from "./components"
-import { dataImg } from "./data"
+import { dataImg, cauan } from "./data"
 
 export function Home(){
-    const cauan = "<CauanLagrotta />"
+   var [displayedText, setDisplayedText] = useState("")
+   const [index, setIndex] = useState(0)
 
+    useEffect(() => {
+        if (index < cauan.length) {
+            var timeout = setTimeout(() => {
+                setDisplayedText((prev) => prev + cauan[index])
+                setIndex(index + 1)
+            }, 350)
+
+            return () => clearTimeout(timeout)
+
+        } else {
+
+            setIndex(0)
+            setDisplayedText('')
+        }
+    }, [index])
+    
     return(
         <ContainerHome id="home">
             <LeftSide >
@@ -11,7 +29,7 @@ export function Home(){
             </LeftSide>
 
             <RightSide>
-                <Title> {cauan} </Title>
+                <Title> {displayedText} </Title>
 
                 <Text>
                      Olá! Eu sou Cauan Lagrotta, desenvolvedor web em formação, apaixonado por criar experiências interativas e funcionais na web. Estou focado em aprender e aplicar as melhores práticas de desenvolvimento fullstack para construir interfaces dinâmicas e sistemas eficientes. 

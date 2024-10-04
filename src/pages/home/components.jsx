@@ -4,10 +4,12 @@ const ContainerHome = styled.div({
     width: "100vw",
     height: "100vh",
     backgroundColor: "#0d0e0e",
+    paddingTop: "100px",
 
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    
 })
 
 const LeftSide = styled.div({
@@ -59,16 +61,20 @@ const Title = styled.h1({
     fontSize: "40px",
     textAlign: "center",
     fontFamily: "Roboto, sans-serif",
+    height: "50px", 
+    overflow: "hidden", 
 
     '@media (max-width: 768px)': {
         fontSize: "30px",
+        height: "40px", 
     },
-})
+});
+
 
 const Text = styled.p({
     color: "#fff",
     width: "80%",
-    fontSize: "15px",
+    fontSize: "20px",
     textAlign: "justify",
     fontFamily: "Roboto, sans-serif",
     lineHeight: "25px",
@@ -77,8 +83,22 @@ const Text = styled.p({
 const Bottom = styled.div({
     height: "5px",
     width: "80%",
-    backgroundColor: "#1b235b",
-})
+    background: "linear-gradient(90deg, rgba(7,30,121,1) 10%, rgba(43,43,246,1) 22%, rgba(76,76,255,1) 40%, rgba(69,133,207,1) 56%, rgba(40,141,191,1) 77%, rgba(22,170,200,1) 94%)",
+    backgroundSize: "200% 200%",
+    animation: "fade 5s ease infinite",
+    
+    '@keyframes fade': {
+        '0%': {
+            backgroundPosition: "0% 50%",
+        },
+        '50%': {
+            backgroundPosition: "100% 50%",
+        },
+        '100%': {
+            backgroundPosition: "0% 50%",
+        }
+    }
+});
 
 const TechsDiv = styled.div({
     width: "80%",
