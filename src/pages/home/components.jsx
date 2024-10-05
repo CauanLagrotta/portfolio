@@ -31,6 +31,11 @@ const Image = styled.img({
     width: "500px",
     height: "500px",
     borderRadius: "50%",
+
+    '@media (max-width: 820px)': {
+        width: "400px",
+        height: "400px",
+    },
 })
 
 const RightSide = styled.div({
@@ -54,6 +59,8 @@ const RightSide = styled.div({
         alignItems: "center",
         gap: "20px",
     },
+
+    
 })
 
 const Title = styled.h1({
@@ -112,6 +119,10 @@ const TechsDiv = styled.div({
 const Techs = styled.img({
     width: "50px",
     height: "50px",
+
+    '&:hover': {
+        cursor: "pointer"
+    }
 })
 
 

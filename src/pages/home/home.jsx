@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react"
 import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom, TechsDiv, Techs } from "./components"
-import { dataImg, cauan } from "./data"
+import { dataImg, cauan } from "./dataHome"
 
 export function Home(){
-   var [displayedText, setDisplayedText] = useState("")
+   const [displayedText, setDisplayedText] = useState("")
    const [index, setIndex] = useState(0)
 
     useEffect(() => {
         if (index < cauan.length) {
-            var timeout = setTimeout(() => {
+            const timeout = setTimeout(() => {
                 setDisplayedText((prev) => prev + cauan[index])
                 setIndex(index + 1)
             }, 350)
