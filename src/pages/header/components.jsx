@@ -7,6 +7,7 @@ const ContainerHeader = styled.div({
     backgroundColor: "#1b235b",
     color: "#fff",
     position: "fixed",
+    zIndex: "999",
 
     display: "flex",
     justifyContent: "space-between",

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom, TechsDiv, Techs } from "./components"
+import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom } from "./components"
 import { dataImg, cauan } from "./dataHome"
 
 export function Home(){
@@ -25,7 +25,7 @@ export function Home(){
     return(
         <ContainerHome id="home">
             <LeftSide >
-                <Image src="./images/home.png" />
+                <Image src="./images/bluebrain.png" />
             </LeftSide>
 
             <RightSide>
@@ -34,13 +34,9 @@ export function Home(){
                 <Text>
                      Olá! Eu sou Cauan Lagrotta, desenvolvedor web em formação, apaixonado por criar experiências interativas e funcionais na web. Estou focado em aprender e aplicar as melhores práticas de desenvolvimento fullstack para construir interfaces dinâmicas e sistemas eficientes. 
                 </Text>
+
                 <Bottom/>
 
-                <TechsDiv>
-                    {dataImg.map((item) => (
-                        <Techs src={item.url} />
-                    ))}
-                </TechsDiv>
             </RightSide>
         </ContainerHome>
     )
