@@ -1,9 +1,13 @@
-import { ContainerProjects } from "./components";
+import { ContainerProjects, TitleProject } from "./components"
 
-export function Projects(){
-    return(
+
+export function Projects() {
+    return (
         <ContainerProjects id="projects">
-            <h1>Projects</h1>
+            <TitleProject> Meus Projetos </TitleProject>
+
+            
         </ContainerProjects>
-    )
+
+    );
 }
