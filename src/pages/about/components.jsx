@@ -29,8 +29,27 @@ const TextAbout = styled.p({
     lineHeight: "25px",
     marginBottom: "20px",
 
+    '@media (max-width: 1280px) and (max-height: 1366px)': {
+        fontSize: "30px",
+        lineHeight: "40px",
+    },
+
+    '@media (max-width: 912px) and (max-height: 1368px)': {
+        fontSize: "30px",
+        lineHeight: "40px",
+        overflow: "hidden",
+    },
+
+    '@media (max-width: 820px)': {
+        fontSize: "30px",
+        lineHeight: "40px",
+    },
+
     '@media (max-width: 768px)': {
         textAlign: "center",
+        fontSize: "25px",
+        lineHeight: "30px",
+
     },
 });
 
@@ -49,7 +68,28 @@ const Gmail = styled.a({
 
     '&:hover': {
         cursor: "pointer"
-    }
+    },
+
+    '@media (max-width: 1280px) and (max-height: 800px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 1024px) and (max-height: 1366px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 912px) and (max-height: 1368px)': {
+        fontSize: "70px",
+        
+     },
+
+    '@media (max-width: 820px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 768px)': {
+        fontSize: "50px",
+    },
 });
 
 const Github = styled.a({
@@ -59,7 +99,28 @@ const Github = styled.a({
 
     '&:hover': {
         cursor: "pointer"
-    }
+    },
+
+    '@media (max-width: 1280px) and (max-height: 800px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 1024px) and (max-height: 1366px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 912px) and (max-height: 1368px)': {
+        fontSize: "70px",
+        
+     },
+
+    '@media (max-width: 820px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 768px)': {
+        fontSize: "50px",
+    },
 });
 
 const Linkedin = styled.a({
@@ -69,7 +130,28 @@ const Linkedin = styled.a({
 
     '&:hover': {
         cursor: "pointer",
-    }
+    },
+
+    '@media (max-width: 1280px) and (max-height: 800px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 1024px) and (max-height: 1366px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 912px) and (max-height: 1368px)': {
+        fontSize: "70px",
+        
+     },
+
+    '@media (max-width: 820px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 768px)': {
+        fontSize: "50px",
+    },
 });
 
 const Whatsapp = styled.a({
@@ -79,7 +161,28 @@ const Whatsapp = styled.a({
 
     '&:hover': {
         cursor: "pointer"
-    }
+    },
+
+    '@media (max-width: 1280px) and (max-height: 800px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 1024px) and (max-height: 1366px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 912px) and (max-height: 1368px)': {
+        fontSize: "70px",
+        
+     },
+
+    '@media (max-width: 820px)': {
+        fontSize: "70px",
+    },
+
+    '@media (max-width: 768px)': {
+        fontSize: "50px",
+    },
 });
 
 export { ContainerAbout, TitleAbout, TextAbout, ContactItems, Gmail, Github, Linkedin, Whatsapp };

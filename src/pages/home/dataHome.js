@@ -47,3 +47,15 @@ export const cauan = [
   ">",
   " ",
 ];
+
+export const softSkills = [
+  "Comunicação",
+  "Trabalho em Equipe",
+  "Resolução de problemas",
+  "Adaptabilidade",
+  "Criatividade",
+  "Inteligência emocional",
+  "Proatividade",
+  "Capacidade de aprendizado",
+  "Autodisciplina"
+]

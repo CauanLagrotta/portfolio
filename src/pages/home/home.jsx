@@ -1,10 +1,20 @@
 import { useState, useEffect } from "react"
 import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom } from "./components"
-import { dataImg, cauan } from "./dataHome"
+import { Modal } from "./modal.jsx"
+import { cauan } from "./dataHome"
 
 export function Home(){
    const [displayedText, setDisplayedText] = useState("")
    const [index, setIndex] = useState(0)
+   const [isModalOpen, setIsModalOpen] = useState(false)
+
+   const handleImageClick = () => {
+    setIsModalOpen(true)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
 
     useEffect(() => {
         if (index < cauan.length) {
@@ -25,7 +35,7 @@ export function Home(){
     return(
         <ContainerHome id="home">
             <LeftSide >
-                <Image src="./images/bluebrain.png" />
+                <Image src="./images/bluebrain.png" onClick={handleImageClick}/>
             </LeftSide>
 
             <RightSide>
@@ -38,6 +48,10 @@ export function Home(){
                 <Bottom/>
 
             </RightSide>
+
+            {isModalOpen && (
+                <Modal closeModal={closeModal}/>
+            )}
         </ContainerHome>
     )
 }
