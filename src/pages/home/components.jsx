@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const ContainerHome = styled.div({
   width: "100vw",
   height: "100vh",
   backgroundColor: "#0d0e0e",
   paddingTop: "100px",
+
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
@@ -23,9 +24,9 @@ const ContainerHome = styled.div({
 
   '@media (max-width: 820px)': {
     flexDirection: "column-reverse",
-    justifyContent: "center", // Centraliza os elementos
-    alignItems: "center", // Alinha verticalmente
-    marginTop: "20px", // Ajuste menor no topo
+    justifyContent: "center", 
+    alignItems: "center", 
+    marginTop: "20px",
   },
 
   '@media (max-width: 768px)': {
@@ -44,8 +45,35 @@ const LeftSide = styled.div({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-
+  flexDirection: "column"
 });
+
+
+const fadeInOut = keyframes`
+  0% {
+    color: #0e76a8;
+ 
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  100% {
+    color: #0e76a8;
+  }
+`;
+
+const FadeText = styled.p`
+  color: #0e76a8;
+  font-weight: bold;
+  font-family: 'Arial', Sans-serif;
+  animation: ${fadeInOut} 4s infinite ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const Image = styled.img({
   width: "400px",
@@ -127,6 +155,7 @@ const Image = styled.img({
 const RightSide = styled.div({
   width: "50%",
   height: "100%",
+
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -324,4 +353,4 @@ const Bottom = styled.div({
   },
 });
 
-export { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom };
+export { ContainerHome, LeftSide, FadeText, Image, RightSide, Title, Text, Bottom };

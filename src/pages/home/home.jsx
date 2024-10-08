@@ -1,20 +1,20 @@
 import { useState, useEffect } from "react"
-import { ContainerHome, LeftSide, Image, RightSide, Title, Text, Bottom } from "./components"
+import { ContainerHome, LeftSide, FadeText, Image, RightSide, Title, Text, Bottom } from "./components"
 import { Modal } from "./modal.jsx"
 import { cauan } from "./dataHome"
 
-export function Home(){
-   const [displayedText, setDisplayedText] = useState("")
-   const [index, setIndex] = useState(0)
-   const [isModalOpen, setIsModalOpen] = useState(false)
+export function Home() {
+    const [displayedText, setDisplayedText] = useState("")
+    const [index, setIndex] = useState(0)
+    const [isModalOpen, setIsModalOpen] = useState(false)
 
-   const handleImageClick = () => {
-    setIsModalOpen(true)
-  }
+    const handleImageClick = () => {
+        setIsModalOpen(true)
+    }
 
-  const closeModal = () => {
-    setIsModalOpen(false)
-  }
+    const closeModal = () => {
+        setIsModalOpen(false)
+    }
 
     useEffect(() => {
         if (index < cauan.length) {
@@ -30,12 +30,15 @@ export function Home(){
             setIndex(0)
             setDisplayedText('')
         }
+
     }, [index])
-    
-    return(
+
+    return (
         <ContainerHome id="home">
-            <LeftSide >
-                <Image src="./images/bluebrain.png" onClick={handleImageClick}/>
+            <LeftSide onClick={handleImageClick}>
+                <Image src="./images/bluebrain.png" />
+
+                <FadeText> Clique para ver minhas habilidades </FadeText>
             </LeftSide>
 
             <RightSide>
@@ -49,9 +52,11 @@ export function Home(){
 
             </RightSide>
 
-            {isModalOpen && (
-                <Modal closeModal={closeModal}/>
-            )}
-        </ContainerHome>
+            {
+        isModalOpen && (
+            <Modal closeModal={closeModal} />
+        )
+    }
+        </ContainerHome >
     )
 }

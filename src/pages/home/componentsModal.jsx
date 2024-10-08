@@ -135,6 +135,7 @@ const CloseButton = styled.button({
   borderRadius: "8px",
   cursor: "pointer",
   fontFamily: "'Arial', Sans-serif",
+  fontSize: "20px"
 });
 
 export { ModalContainer, ModalContent, Title, ContainerCards, Card, CardTitle, CardSubtitle, DivSoftSkills, DivHardSkills, Image, CloseButton, TextSoftSkills };
