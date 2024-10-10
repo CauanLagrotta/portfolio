@@ -1,8 +1,41 @@
-# React + Vite
+# Meu Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo(a) ao meu portfólio! Este projeto foi desenvolvido utilizando **React** e **Styled Components**, com o objetivo de apresentar meus projetos e habilidades de forma clara e atraente.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: Uma biblioteca JavaScript para construir interfaces de usuário.
+- **Styled Components**: Uma biblioteca para estilização de componentes que permite escrever CSS em JS.
+- **Vite**: Um bundler de front-end rápido para desenvolvimento.
+- **Font Awesome**: Ícones escaláveis para melhorar a estética do design.
+- **Material UI**: Uma biblioteca de componentes React que implementa o design material do Google.
+
+## Funcionalidades
+
+- Navegação intuitiva entre os projetos.
+- Design responsivo e moderno.
+- Apresentação clara de cada projeto, incluindo descrição e tecnologias utilizadas.
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+  ```bash
+  git clone https://github.com/CauanLagrotta/portfolio.git
+  ```
+
+2. Navegue até o repositório:
+  ```bash
+  cd portfolio
+  ```
+
+3. Instale as dependências:
+  ```bash
+   npm install
+  ```
+
+4. Execute o projeto:
+  ```bash
+   npm run dev
+  ```
+
+
