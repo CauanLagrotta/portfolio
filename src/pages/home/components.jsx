@@ -45,7 +45,7 @@ const LeftSide = styled.div({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  flexDirection: "column"
+  flexDirection: "column",
 });
 
 
@@ -69,9 +69,58 @@ const FadeText = styled.p`
   font-weight: bold;
   font-family: 'Arial', Sans-serif;
   animation: ${fadeInOut} 4s infinite ease-in-out;
-
+  font-size: 20px;
+  
   &:hover {
     cursor: pointer;
+  }
+
+  @media (max-width: 1024px) and (max-height: 1366px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 1280px) and (max-height: 800px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 1024px) and (max-height: 600px) {
+    font-size: 25px;
+    overflow: hidden;
+    margin-left: 50px;
+  }
+
+  @media (max-width: 912px) and (max-height: 1368px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 820px) and (max-height: 1180px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 540px) and (max-height: 720px) {
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 430px) and (max-height: 932px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 414px) and (max-height: 896px) {
+    font-size: 20px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 375px) and (max-height: 667px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 360px) and (max-height: 740px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 344px) and (max-height: 882px) {
+    font-size: 15px;
   }
 `;
 
@@ -87,8 +136,8 @@ const Image = styled.img({
   },
 
   '@media (max-width: 1024px) and (max-height: 600px)': {
-    width: "300px",
-    height: "300px",
+    width: "200px",
+    height: "200px",
   },
 
   '@media (max-width: 820px)': {
@@ -102,28 +151,33 @@ const Image = styled.img({
   },
 
   '@media (max-width: 430px) and (max-height: 932px)': {
-    width: "400px",
-    height: "250px",
+    width: "300px",
+    height: "300px",
   },
 
   '@media (max-width: 414px) and (max-height: 896px)': {
-    width: "300px",
+    width: "200px",
     height: "200px",
   },
 
   '@media (max-width: 412px) and (max-height: 915px)': {
-    width: "400px",
-    height: "250px",
+    width: "200px",
+    height: "200px",
+  },
+
+  '@media (max-width: 390px) and (max-height: 844px)': {
+    width: "200px",
+    height: "200px",
   },
 
   '@media (max-width: 375px) and (max-height: 667px)': {
-    width: "300px",
+    width: "200px",
     height: "200px",
   },
 
   '@media (max-width: 344px) and (max-height: 882px)': {
-    width: "400px",
-    height: "250px",
+    width: "200px",
+    height: "200px",
   },
 
   
@@ -254,6 +308,7 @@ const Text = styled.p({
   textAlign: "justify",
   fontFamily: "Roboto, sans-serif",
   lineHeight: "30px",
+  overflow: "hidden",
 
   '@media (max-width: 1280px) and (max-height: 800px)': {
     fontSize: "30px",

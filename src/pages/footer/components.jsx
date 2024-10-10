@@ -5,6 +5,7 @@ const ContainerFooter = styled.div({
     height: "100px",
     backgroundColor: "#1b235b",
     color: "#fff",
+
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
