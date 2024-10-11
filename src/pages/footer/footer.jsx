@@ -33,7 +33,7 @@ export function Footer() {
                         </IconLink>
                     </Tooltip>
                     <Tooltip title="WhatsApp">
-                        <IconLink href="https://api.whatsapp.com/send?phone=5532998552418&text=Olá,%20Cauan!%20Vim%20pelo%20seu%20portfólio%20e%20Gostaria%20de%20conversar." target="_blank">
+                        <IconLink href="https://wa.me/5532998552418?text=Olá,%20vim%20pelo%20seu%20portfólio%20e%20Gostaria%20de%20conversar!" target="_blank">
                             <FontAwesomeIcon icon={faWhatsapp} style={{ color: "#25d366" }} />
                         </IconLink>
                     </Tooltip>

@@ -17,7 +17,7 @@ export const dataCards = [
 
     {
         title: "Quadro de desenho",
-        description: "Apresentando meu projeto: Quadro de Desenho! Estou empolgado em compartilhar meu projeto de Quadro de Desenho, desenvolvido com HTML, CSS e JavaScript. Este aplicativo permite que os usuários desenhem livremente em um canvas, escolham entre cores predefinidas e limpem o quadro com um simples clique",
+        description: "Apresentando meu projeto: Quadro de Desenho! Estou empolgado em compartilhar meu projeto de Quadro de Desenho, desenvolvido com HTML, CSS e JavaScript. Este aplicativo permite que os usuários desenhem livremente em um canvas, escolham entre cores predefinidas e limpem o quadro com um simples clique.",
         image: "./images/quadrodedesenho.jfif",
         deploy: "https://quadro-de-desenho.vercel.app",
         github: "https://github.com/CauanLagrotta/quadro-de-desenho.git"

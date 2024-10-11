@@ -49,7 +49,7 @@ export function About() {
         </Tooltip>
 
         <Tooltip title="Whatsapp">
-          <Whatsapp href="https://api.whatsapp.com/send?phone=5532998552418&text=Olá,%20Cauan!%20Vim%20pelo%20seu%20portfólio%20e%20Gostaria%20de%20conversar." target="_blank">
+          <Whatsapp href="https://wa.me/5532998552418?text=Olá,%20vim%20pelo%20seu%20portfólio%20e%20Gostaria%20de%20conversar!" target="_blank">
             <FontAwesomeIcon icon={faWhatsapp} />
           </Whatsapp>
         </Tooltip>
