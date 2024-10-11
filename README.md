@@ -16,6 +16,9 @@ Bem-vindo(a) ao meu portfólio! Este projeto foi desenvolvido utilizando **React
 - Design responsivo e moderno.
 - Apresentação clara de cada projeto, incluindo descrição e tecnologias utilizadas.
 
+## Site hospedado
+https://portfolio-five-omega-32.vercel.app/
+
 ## Como Executar o Projeto
 
 1. Clone o repositório:
