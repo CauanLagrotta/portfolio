@@ -46,8 +46,8 @@ const TextAbout = styled.p({
     },
 
     '@media (max-width: 768px)': {
-        textAlign: "center",
-        fontSize: "25px",
+        textAlign: "start",
+        fontSize: "20px",
         lineHeight: "30px",
 
     },
