@@ -9,6 +9,9 @@ export const dataImg = [
     url: "./images/js.png",
   },
   {
+    url: "./images/ts.png",
+  },
+  {
     url: "./images/react.png",
   },
   {
@@ -22,6 +25,9 @@ export const dataImg = [
   },
   {
     url: "./images/mysql.png",
+  },
+  {
+    url: "./images/sqlite.png",
   },
   {
     url: "./images/git.png",

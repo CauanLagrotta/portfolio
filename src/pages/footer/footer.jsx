@@ -24,7 +24,7 @@ export function Footer() {
                     </Tooltip>
                     <Tooltip title="GitHub">
                         <IconLink href="https://github.com/CauanLagrotta" target="_blank">
-                            <FontAwesomeIcon icon={faGithub} />
+                            <FontAwesomeIcon icon={faGithub} style={{ color: "#fff" }} />
                         </IconLink>
                     </Tooltip>
                     <Tooltip title="LinkedIn">
