@@ -19,8 +19,7 @@ export function Projects() {
 
       <GridContainer>
         {dataCards.map((card) => (
-         
-          <CardContainer key={card.title}> 
+          <CardContainer key={card.title}>
             <CardImage src={card.image} alt="Project Image" />
             <CardContent>
               <CardTitle>{card.title}</CardTitle>
@@ -29,9 +28,12 @@ export function Projects() {
                 <CardLink href={card.github} target="_blank">
                   Ver no GitHub
                 </CardLink>
-                <CardLink href={card.deploy} target="_blank">
-                  Ver Deploy
-                </CardLink>
+
+                {card.deploy && (
+                  <CardLink href={card.deploy} target="_blank">
+                    Ver Deploy
+                  </CardLink>
+                )}
               </CardLinks>
             </CardContent>
           </CardContainer>

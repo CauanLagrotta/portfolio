@@ -72,6 +72,9 @@ const CardContainer = styled.div({
   overflow: "hidden",
   color: "#fff",
   fontFamily: "'Roboto', sans-serif",
+  display: "flex",
+  flexDirection: "column", 
+  justifyContent: "space-between",
 
   '@media (max-width: 768px)': {
     borderRadius: "6px",
@@ -152,6 +155,7 @@ const CardLink = styled.a({
   textDecoration: "none",
   color: "#00A9FF",
   fontWeight: "bold",
+  
 
   "&:hover": {
     textDecoration: "underline",
