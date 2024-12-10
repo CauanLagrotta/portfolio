@@ -17,7 +17,7 @@ Bem-vindo(a) ao meu portfólio! Este projeto foi desenvolvido utilizando **React
 - Apresentação clara de cada projeto, incluindo descrição e tecnologias utilizadas.
 
 ## Site hospedado
-https://portfolio-five-omega-32.vercel.app/
+https://portfolio-sable-delta-31.vercel.app
 
 ## Como Executar o Projeto
 
