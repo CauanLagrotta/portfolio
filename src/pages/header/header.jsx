@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { ContainerHeader, Logo, ContainerLinks, Link, MenuButton, SideBar, SideBarOpen, Close } from "./components";
+import { 
+  ContainerHeader, Logo, ContainerLinks, Link, 
+  MenuButton, SideBar, CloseButton 
+} from "./components";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-
 
 export function Header() {
   const [open, setOpen] = useState(false);
 
   const toggleSideBar = () => {
-    setOpen(!open); 
+    setOpen(!open);
   };
 
   return (
@@ -16,7 +18,6 @@ export function Header() {
       <a href="#home">
         <Logo src="./images/header.png" />
       </a>
-
 
       <ContainerLinks>
         <Link href="#home"> Home </Link>
@@ -28,16 +29,12 @@ export function Header() {
         {open ? <CloseIcon /> : <MenuIcon />} 
       </MenuButton>
 
-      {open ? (
-        <SideBarOpen>
-          <Close onClick={toggleSideBar} />
-          <Link href="#home" onClick={toggleSideBar}> Home </Link>
-          <Link href="#about" onClick={toggleSideBar}> Sobre mim </Link>
-          <Link href="#projects" onClick={toggleSideBar}> Projetos </Link>
-        </SideBarOpen>
-      ) : (
-        <SideBar />
-      )}
+      <SideBar open={open}>
+        <CloseButton onClick={toggleSideBar} />
+        <Link href="#home" onClick={toggleSideBar}> Home </Link>
+        <Link href="#about" onClick={toggleSideBar}> Sobre mim </Link>
+        <Link href="#projects" onClick={toggleSideBar}> Projetos </Link>
+      </SideBar>
     </ContainerHeader>
   );
 }

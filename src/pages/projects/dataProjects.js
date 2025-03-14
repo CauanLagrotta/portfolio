@@ -1,33 +1,39 @@
 export const dataCards = [
   {
-    title: "Gerenciador de pedidos",
+    title: "Birthday Reminder",
     description:
-      "Este projeto é uma aplicação web para gerenciamento de pedidos em um restaurante, com funcionalidades distintas para administradores e usuários. A aplicação permite realizar operações no carrinho, gerenciar produtos e pedidos, e conta com recursos completos de autenticação.",
-    image: "./images/restaurant.png",
+      "Um projeto simples de um lembrete de aniversariantes com React e Tailwind CSS, permitindo adicionar aniversariantes e exibir uma lista de aniversariantes.",
+    image: "./project_images/birthdayreminder.jpeg",
+    github: "https://github.com/CauanLagrotta/birthday_reminder.git",
+  },
+  {
+    title: "Gerenciador de Pedidos",
+    description:
+      "Aplicação web para gerenciar pedidos de restaurante, com autenticação e controle de produtos e carrinho.",
+    image: "./project_images/restaurant.png",
     github: "https://github.com/CauanLagrotta/restaurant-falae.git",
   },
   {
     title: "To-Do List",
     description:
-      "Meu projeto é uma To-Do List desenvolvida com HTML, CSS e JavaScript. O aplicativo permite gerenciar tarefas de forma simples, adicionando, removendo e marcando como concluídas. As informações são salvas no LocalStorage, garantindo que as tarefas permaneçam após recarregar a página.",
-    image: "./images/todolist.jfif",
+      "Lista de tarefas interativa com salvamento no LocalStorage, permitindo adicionar, remover e marcar como concluídas.",
+    image: "./project_images/todolist.jfif",
     deploy: "https://todolist-omega-henna.vercel.app",
     github: "https://github.com/CauanLagrotta/todolist.git",
   },
   {
-    title: "Jogo da velha",
+    title: "Jogo da Velha",
     description:
-      "Meu projeto é um Jogo da Velha desenvolvido com HTML, CSS e JavaScript. Ele permite que dois jogadores se enfrentem em uma partida clássica, com uma interface intuitiva. O jogo verifica automaticamente vitórias ou empates, proporcionando uma experiência divertida para desafiar amigos.",
-    image: "./images/jogodavelha.jfif",
+      "Jogo da Velha clássico para dois jogadores, com detecção automática de vitória ou empate.",
+    image: "./project_images/jogodavelha.jfif",
     deploy: "https://jogo-da-velha-pi-bice.vercel.app",
     github: "https://github.com/CauanLagrotta/jogo-da-velha.git",
   },
-
   {
-    title: "Quadro de desenho",
+    title: "Quadro de Desenho",
     description:
-      "Apresentando meu projeto: Quadro de Desenho! Estou empolgado em compartilhar meu projeto de Quadro de Desenho, desenvolvido com HTML, CSS e JavaScript. Este aplicativo permite que os usuários desenhem livremente em um canvas, escolham entre cores predefinidas e limpem o quadro com um simples clique.",
-    image: "./images/quadrodedesenho.jfif",
+      "Aplicativo de desenho em canvas com seleção de cores e opção de limpar o quadro.",
+    image: "./project_images/quadrodedesenho.jfif",
     deploy: "https://quadro-de-desenho.vercel.app",
     github: "https://github.com/CauanLagrotta/quadro-de-desenho.git",
   },

@@ -30,6 +30,9 @@ export const dataImg = [
     url: "./images/sqlite.png",
   },
   {
+    url: "./images/docker.png",
+  },
+  {
     url: "./images/git.png",
   },
 ];

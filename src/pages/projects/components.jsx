@@ -96,9 +96,12 @@ const CardImage = styled.img({
 });
 
 const CardContent = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between",
   padding: "20px",
+  flexGrow: 1,
 
-  
   '@media (max-width: 768px)': {
     padding: "15px",
   },
@@ -111,14 +114,18 @@ const CardContent = styled.div({
 const CardTitle = styled.h3({
   fontSize: "24px",
   marginBottom: "10px",
-
+  minHeight: "50px", 
+  display: "flex",
+  alignItems: "center",
 
   '@media (max-width: 768px)': {
     fontSize: "20px",
+    minHeight: "45px",
   },
 
   '@media (max-width: 480px)': {
     fontSize: "18px",
+    minHeight: "40px",
   },
 });
 
