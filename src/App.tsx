@@ -6,7 +6,7 @@ import { Projects } from "./components/projects/Projects";
 
 export function App() {
   return (
-    <div className="flex-col h-screen bg-gray-900 text-gray-100 overflow-hidden">
+    <div className="flex-col h-screen bg-gray-900 text-gray-100 overflow-auto">
       <Header />
 
       <Routes>

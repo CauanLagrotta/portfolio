@@ -10,8 +10,13 @@ export const Header = () => {
   };
 
   return (
-    <header className="mt-10 mb-10 w-full flex justify-around items-center">
-      <button className="sm:hidden z-10 ml-auto mr-5" onClick={toggleMenu}>
+    <header className="mt-10 mb-10 w-full flex justify-around items-center overflow-hidden">
+      <button
+        className={`sm:hidden ${
+          isMenuOpen ? "fixed right-0 top-10" : ""
+        } ml-auto mr-5 z-50 `}
+        onClick={toggleMenu}
+      >
         {isMenuOpen ? (
           <XIcon size={32} weight="bold" />
         ) : (
@@ -67,7 +72,7 @@ export const Header = () => {
 
       {/* Menu lateral para dispositivos mobile */}
       <div
-        className={`fixed top-0 right-0 h-full bg-gray-800 w-1/2 transform transition-transform duration-300 ease-in-out sm:hidden ${
+        className={`fixed top-0 right-0 h-full bg-gray-800 w-1/2 transform transition-transform duration-300 ease-in-out sm:hidden z-40 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

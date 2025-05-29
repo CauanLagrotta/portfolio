@@ -40,5 +40,5 @@ export const AnimatedName = () => {
     return () => clearTimeout(timeout);
   }, [index, animateNameData]);
 
-  return <span className="text-4xl text-sky-600 ">{displayedText}</span>;
+  return <span className="h-10 text-4xl text-sky-600 ">{displayedText}</span>;
 };
