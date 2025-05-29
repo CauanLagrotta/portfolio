@@ -1,10 +1,10 @@
 import * as motion from "motion/react-client";
-import { AnimatedName } from "./animated/AnimatedName";
-import { Lozengue } from "./animated/Lozengue";
+import { AnimatedName } from "../components/home/animated/AnimatedName";
+import { Lozengue } from "../components/home/animated/Lozengue";
 
-export const Home = () => {
+export function Home() {
   return (
-    <div id="home" className="flex flex-col items-center">
+    <div className="flex flex-col items-center">
       <AnimatedName />
 
       <div className="flex flex-col sm:flex-row justify-around w-full mt-15 sm:mt-25">

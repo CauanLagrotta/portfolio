@@ -1,6 +1,6 @@
-export const About = () => {
+export function About() {
   return (
-    <div id="about">
+    <div>
       <h1>About</h1>
     </div>
   );
