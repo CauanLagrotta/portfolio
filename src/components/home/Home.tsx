@@ -7,7 +7,7 @@ export const Home = () => {
     <div id="home" className="flex flex-col items-center">
       <AnimatedName />
 
-      <div className="flex flex-col sm:flex-row justify-around w-full mt-15">
+      <div className="flex flex-col sm:flex-row justify-around w-full mt-15 sm:mt-25">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
