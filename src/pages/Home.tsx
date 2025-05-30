@@ -4,7 +4,7 @@ import { Lozengue } from "../components/home/animated/Lozengue";
 
 export function Home() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center md:pt-16">
       <AnimatedName />
 
       <div className="flex flex-col sm:flex-row justify-around w-full mt-15 sm:mt-25">

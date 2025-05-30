@@ -6,7 +6,7 @@ export function About() {
     <div className="flex flex-col items-center px-4 py-10 md:px-20">
       <h2 className="text-4xl text-sky-600 self-start mb-8">Sobre mim</h2>
 
-      <div className="flex flex-col md:flex-row items-center gap-10">
+      <div className="flex flex-col lg:flex-row items-center gap-10">
         {/* Foto com animação */}
         <motion.div
           initial={{ opacity: 0, y: 50, x: -50 }}
@@ -15,7 +15,7 @@ export function About() {
         >
           <img
             src={profileImg}
-            className="w-64 md:w-80 h-auto rounded-2xl shadow-lg"
+            className="w-64 h-auto rounded-2xl shadow-lg"
             alt="Foto de perfil"
           />
         </motion.div>
