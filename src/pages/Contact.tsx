@@ -49,7 +49,7 @@ export function Contact() {
               <p>Email</p>
             </a>
             <a
-              href="https://wa.me/5532998552418?text=Olá%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+              href="https://wa.me/5532998552418?text=Olá,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-600 hover:text-green-800 transition-all duration-200 flex flex-col items-center"
@@ -58,10 +58,10 @@ export function Contact() {
               <p>Whatsapp</p>
             </a>
             <a
-              href="https://www.linkedin.com/in/davi-mostaro-05a569361/"
+              href="https://www.linkedin.com/in/cauan-silva-lagrotta/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-700 hover:text-blue-800 transition-all duration-200 flex flex-col items-center"
+              className="text-blue-500 hover:text-blue-700 transition-all duration-200 flex flex-col items-center"
             >
               <LinkedinLogoIcon size={32} />
               <p>LinkedIn</p>
