@@ -71,6 +71,13 @@ export const Header = () => {
       </nav>
 
       {/* Menu lateral para dispositivos mobile */}
+      {/* Overlay para fechar quando clicar fora */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-opacity-40 z-30 sm:hidden"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
       <div
         className={`fixed top-0 right-0 h-full bg-gray-800 w-1/2 transform transition-transform duration-300 ease-in-out sm:hidden z-40 ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -79,6 +86,7 @@ export const Header = () => {
         <nav className="flex flex-col items-center justify-center h-full gap-6">
           <NavLink
             to="/"
+            onClick={() => setIsMenuOpen(false)}
             className={({ isActive }) =>
               `border-b-2 border-transparent hover:border-b-2 hover:border-b-sky-700 hover:text-sky-700 py-3 flex gap-4 transition-all duration-200 ${
                 isActive ? "border-b-sky-500 text-sky-500" : ""
@@ -90,6 +98,7 @@ export const Header = () => {
 
           <NavLink
             to="/about"
+            onClick={() => setIsMenuOpen(false)}
             className={({ isActive }) =>
               `border-b-2 border-transparent hover:border-b-2 hover:border-b-sky-700 hover:text-sky-700 py-3 flex gap-4 transition-all duration-200 ${
                 isActive ? "border-b-sky-500 text-sky-500" : ""
@@ -101,6 +110,7 @@ export const Header = () => {
 
           <NavLink
             to="/projects"
+            onClick={() => setIsMenuOpen(false)}
             className={({ isActive }) =>
               `border-b-2 border-transparent hover:border-b-2 hover:border-b-sky-700 hover:text-sky-700 py-3 flex gap-4 transition-all duration-200 ${
                 isActive ? "border-b-sky-500 text-sky-500" : ""
@@ -112,6 +122,7 @@ export const Header = () => {
 
           <NavLink
             to="/contact"
+            onClick={() => setIsMenuOpen(false)}
             className={({ isActive }) =>
               `border-b-2 border-transparent hover:border-b-2 hover:border-b-sky-700 hover:text-sky-700 py-3 flex gap-4 transition-all duration-200 ${
                 isActive ? "border-b-sky-500 text-sky-500" : ""
