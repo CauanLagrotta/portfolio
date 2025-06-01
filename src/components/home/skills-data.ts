@@ -8,7 +8,7 @@ export const softSkills = [
   "Gestão de tempo",
   "Criatividade",
   "Proatividade",
-  "Trabalho em equipe",
+  "Inteligência emocional",
 ];
 
 export const hardSkills = [
