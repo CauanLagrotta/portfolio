@@ -61,7 +61,7 @@ export const SkillsDialog = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="font-semibold text-blue-500 mb-2">Soft Skills</h3>
+              <h3 className="font-semibold text-blue-500 mb-2">Principais Soft Skills</h3>
               <ul className="mb-4 list-disc list-inside text-gray-400">
                 {softSkills.map((skill, index) => (
                   <li key={index}>{skill}</li>
