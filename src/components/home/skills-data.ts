@@ -32,5 +32,6 @@ export const hardSkills = [
   "https://images.icon-icons.com/2699/PNG/512/tailwindcss_logo_icon_167923.png",
   "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
   "https://images.icon-icons.com/2107/PNG/512/file_type_jest_icon_130514.png",
-  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg"
+  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitest/vitest-original.svg",
+  "https://nestjs.com/img/logo-small.svg"
 ];
