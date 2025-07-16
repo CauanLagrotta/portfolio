@@ -44,11 +44,19 @@ export const projectsData: ProjectData[] = [
   },
   {
     id: 5,
-    title: "Quadro de Desenho",
+    title: "Dashboard de Vendas Frontend",
     description:
-      "Aplicativo de desenho em canvas com seleção de cores e opção de limpar o quadro.",
-    image: "./project_images/quadrodedesenho.jfif",
-    deploy: "https://quadro-de-desenho.vercel.app",
-    github: "https://github.com/CauanLagrotta/quadro-de-desenho.git",
+      "Dashboard de vendas frontend com React e Tailwind CSS, permitindo visualizar e gerenciar vendas. Projeto desenvolvido para a Codi Academy.",
+    image: "./project_images/dashboard.png",
+    deploy: "https://challenge-vii-noites-ufjf.vercel.app/",
+    github: "https://github.com/CauanLagrotta/ChallengeVII-noites-ufjf.git",
   },
+  {
+    id: 6,
+    title: "NLW Agents",
+    description:
+      "Projeto desenvolvido durante o evento NLW da Rocketseat, com React e Tailwind CSS, permitindo visualizar e gerenciar vendas.",
+    image: "./project_images/nlw-agents.png",
+    github: "https://github.com/CauanLagrotta/nlw-agents.git",
+  }
 ];
