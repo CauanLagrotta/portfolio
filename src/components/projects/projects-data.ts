@@ -35,12 +35,11 @@ export const projectsData: ProjectData[] = [
   },
   {
     id: 4,
-    title: "Jogo da Velha",
+    title: "B7 pizza",
     description:
-      "Jogo da Velha clássico para dois jogadores, com detecção automática de vitória ou empate.",
-    image: "./project_images/jogodavelha.jfif",
-    deploy: "https://jogo-da-velha-pi-bice.vercel.app",
-    github: "https://github.com/CauanLagrotta/jogo-da-velha.git",
+      "Projeto desenvolvido durante a aula, com React e Tailwind CSS, permitindo visualizar e gerenciar vendas, também inclui sistema de pagamento com Stripe.",
+    image: "./project_images/b7pizza.jpeg",
+    github: "https://github.com/CauanLagrotta/b7-pizza.git",
   },
   {
     id: 5,
