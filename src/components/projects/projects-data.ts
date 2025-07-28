@@ -54,7 +54,7 @@ export const projectsData: ProjectData[] = [
     id: 6,
     title: "NLW Agents",
     description:
-      "Projeto desenvolvido durante o evento NLW da Rocketseat, com React e Tailwind CSS, permitindo visualizar e gerenciar vendas.",
+      "Projeto desenvolvido durante o evento NLW da Rocketseat, com React e Tailwind CSS e integração com API do Gemini.",
     image: "./project_images/nlw-agents.png",
     github: "https://github.com/CauanLagrotta/nlw-agents.git",
   }
