@@ -1,191 +1,93 @@
-import { ListIcon, XIcon } from "@phosphor-icons/react";
-import { NavLink } from "react-router-dom";
+import { XIcon, ListIcon } from "@phosphor-icons/react";
 import { useState } from "react";
-import * as motion from "motion/react-client";
+import { NavLink } from "react-router-dom";
+
+const items = [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Sobre mim",
+    url: "/about",
+  },
+  {
+    title: "Projetos",
+    url: "/projects",
+  },
+  {
+    title: "Contato",
+    url: "/contact",
+  },
+];
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
-    <motion.header 
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="mt-10 mb-10 w-full flex justify-around items-center overflow-hidden"
-    >
-      <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        className={`sm:hidden ${
-          isMenuOpen ? "fixed right-0 top-10" : ""
-        } ml-auto mr-5 z-50 p-2 rounded-lg bg-gray-800/80 backdrop-blur-sm border border-gray-700 hover:border-sky-500 transition-all duration-300`}
-        onClick={toggleMenu}
+
+    <header className="mb-10 w-full fixed z-20">
+      <div className="hidden md:flex">
+        <nav className="bg-gray-900 h-20 w-full flex justify-center gap-16">
+          {items.map((item) => (
+            <NavLink
+              key={item.title}
+              to={item.url}
+              className={({ isActive }) =>
+                `border-b-2 mt-5 border-transparent hover:border-b-2 hover:border-b-sky-700 hover:text-sky-700 py-3 flex gap-4 transition-all duration-200 ${
+                  isActive ? "border-b-sky-500 text-sky-500" : ""
+                }`
+              }
+            >
+              {item.title}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
+
+      <div className="md:hidden flex items-center justify-between bg-gray-900 h-20 px-4">
+        <button
+          onClick={toggleSidebar}
+          className="text-white focus:outline-none z-40"
+          aria-label="Toggle menu"
+        >
+          {isSidebarOpen ? <XIcon size={32} /> : <ListIcon size={32} />}
+        </button>
+      </div>
+
+      <div
+        className={`fixed top-0 left-0 h-full w-64 bg-gray-900 transform ${
+          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        } transition-transform duration-300 ease-in-out md:hidden z-30`}
       >
-        <motion.div
-          animate={{ rotate: isMenuOpen ? 180 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {isMenuOpen ? (
-            <XIcon size={32} weight="bold" className="text-sky-400" />
-          ) : (
-            <ListIcon size={32} weight="bold" className="text-sky-400" />
-          )}
-        </motion.div>
-      </motion.button>
+        <nav className="flex flex-col p-4 space-y-4 mt-20">
+          {items.map((item) => (
+            <NavLink
+              key={item.title}
+              to={item.url}
+              onClick={() => setIsSidebarOpen(false)}
+              className={({ isActive }) =>
+                `text-white py-2 px-4 rounded-lg hover:bg-gray-800 hover:text-sky-700 transition-all duration-200 ${
+                  isActive ? "bg-gray-800 text-sky-500" : ""
+                }`
+              }
+            >
+              {item.title}
+            </NavLink>
+          ))}
+        </nav>
+      </div>
 
-      <motion.nav 
-        initial={{ scale: 0.8, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="hidden sm:flex justify-around bg-gradient-to-r from-gray-800/90 to-gray-900/90 backdrop-blur-md rounded-full min-w-3xl px-8 py-2 border border-gray-700/50 shadow-2xl"
-      >
-        <NavLink
-          to="/"
-          className={({ isActive }) =>
-            `relative px-6 py-3 rounded-full transition-all duration-300 group ${
-              isActive 
-                ? "text-sky-400 bg-sky-500/20" 
-                : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-            }`
-          }
-        >
-          <span className="relative z-10">
-          Home
-          </span>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            `relative px-6 py-3 rounded-full transition-all duration-300 group ${
-              isActive 
-                ? "text-sky-400 bg-sky-500/20" 
-                : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-            }`
-          }
-        >
-          <span className="relative z-10">
-          Sobre mim
-          </span>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </NavLink>
-
-        <NavLink
-          to="/projects"
-          className={({ isActive }) =>
-            `relative px-6 py-3 rounded-full transition-all duration-300 group ${
-              isActive 
-                ? "text-sky-400 bg-sky-500/20" 
-                : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-            }`
-          }
-        >
-          <span className="relative z-10">
-          Projetos
-          </span>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </NavLink>
-
-        <NavLink
-          to="/contact"
-          className={({ isActive }) =>
-            `relative px-6 py-3 rounded-full transition-all duration-300 group ${
-              isActive 
-                ? "text-sky-400 bg-sky-500/20" 
-                : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-            }`
-          }
-        >
-          <span className="relative z-10">
-          Contato
-          </span>
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        </NavLink>
-      </motion.nav>
-
-      {/* Menu lateral para dispositivos mobile */}
-      {/* Overlay para fechar quando clicar fora */}
-      {isMenuOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-opacity-40 z-30 sm:hidden"
-          onClick={() => setIsMenuOpen(false)}
+      {isSidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black/30 md:hidden z-20"
+          onClick={toggleSidebar}
         />
       )}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: isMenuOpen ? 0 : "100%" }}
-        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-        className={`fixed top-0 right-0 h-full bg-gray-800 w-1/2 transform transition-transform duration-300 ease-in-out sm:hidden z-40 ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-800 to-gray-900" />
-        <nav className="relative flex flex-col items-center justify-center h-full gap-6">
-          <NavLink
-            to="/"
-            onClick={() => setIsMenuOpen(false)}
-            className={({ isActive }) =>
-              `px-6 py-3 rounded-full transition-all duration-300 ${
-                isActive 
-                  ? "text-sky-400 bg-sky-500/20" 
-                  : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-              }`
-            }
-          >
-            Home
-          </NavLink>
-
-          <NavLink
-            to="/about"
-            onClick={() => setIsMenuOpen(false)}
-            className={({ isActive }) =>
-              `px-6 py-3 rounded-full transition-all duration-300 ${
-                isActive 
-                  ? "text-sky-400 bg-sky-500/20" 
-                  : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-              }`
-            }
-          >
-            Sobre mim
-          </NavLink>
-
-          <NavLink
-            to="/projects"
-            onClick={() => setIsMenuOpen(false)}
-            className={({ isActive }) =>
-              `px-6 py-3 rounded-full transition-all duration-300 ${
-                isActive 
-                  ? "text-sky-400 bg-sky-500/20" 
-                  : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-              }`
-            }
-          >
-            Projetos
-          </NavLink>
-
-          <NavLink
-            to="/contact"
-            onClick={() => setIsMenuOpen(false)}
-            className={({ isActive }) =>
-              `px-6 py-3 rounded-full transition-all duration-300 ${
-                isActive 
-                  ? "text-sky-400 bg-sky-500/20" 
-                  : "text-gray-300 hover:text-sky-400 hover:bg-sky-500/10"
-              }`
-            }
-          >
-            Contato
-          </NavLink>
-        </nav>
-      </motion.div>
-    </motion.header>
+    </header>
   );
 };

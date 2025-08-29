@@ -3,7 +3,7 @@ import profileImg from "../images/profile.jpeg";
 
 export function About() {
   return (
-    <div className="flex flex-col items-center px-4 py-10 md:px-20">
+    <div className="flex flex-col items-center px-4 py-10 md:px-20 z-10">
       <h2 className="text-4xl text-sky-600 self-start mb-8">Sobre mim</h2>
 
       <div className="flex flex-col lg:flex-row items-center gap-10">

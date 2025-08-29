@@ -8,7 +8,7 @@ import {
 
 export function Contact() {
   return (
-    <div className="flex flex-col items-center px-4 py-10 md:px-20 md:pt-16">
+    <div className="flex flex-col items-center px-4 py-10 md:px-20 md:pt-30 z-10">
       <h2 className="text-4xl text-sky-600 self-start mb-8">Contato</h2>
 
       <motion.div

@@ -7,7 +7,12 @@ import { Contact } from "./pages/Contact";
 
 export function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-900 text-gray-100 overflow-auto overflow-x-hidden">
+    <div className="flex min-h-screen bg-gray-900 text-gray-100">
+      <div className="fixed inset-0 z-0 ">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-800 to-gray-900 opacity-80" />
+        <div className="absolute inset-0 backdrop-blur-sm" />
+      </div>
+
       <Header />
 
       <Routes>

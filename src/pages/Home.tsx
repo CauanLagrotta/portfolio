@@ -1,71 +1,103 @@
-import * as motion from "motion/react-client";
-import { AnimatedName } from "../components/home/animated/AnimatedName";
-import { Lozengue } from "../components/home/animated/Lozengue";
-import { ArrowDownIcon } from "@phosphor-icons/react";
+
+import { Button } from "@/components/ui/button";
+import { Ripple } from "../components/magicui/ripple";
+import { TextAnimate } from "@/components/magicui/text-animate";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import {
+  ArrowCircleDownIcon,
+  ArrowRightIcon,
+  EnvelopeSimpleIcon,
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+} from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
-    <div className="flex flex-col items-center md:pt-16 relative min-h-screen">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sky-900/10 via-transparent to-blue-900/10 pointer-events-none" />
-      
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10"
+    <div className="flex flex-col justify-center items-center pt-25 z-10 mx-auto overflow-hidden relative">
+      <Ripple mainCircleOpacity={0.4} className="" />
+
+      <TextAnimate
+        animation="slideUp"
+        duration={0.9}
+        by="word"
+        className="text-4xl md:text-7xl font-bold text-white brightness-200"
       >
-        <AnimatedName />
-      </motion.div>
+        Olá, Eu sou
+      </TextAnimate>
+      <AuroraText
+        colors={[
+          "#3383B1",
+          "#2f0f86",
+          "#1f68c7",
+          "#13448E",
+          "#0E36A3",
+          "#2f0f86",
+        ]}
+        speed={2}
+        className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent brightness-200 h-20"
+      >
+        Cauan Lagrotta
+      </AuroraText>
 
-      <div className="flex flex-col sm:flex-row justify-around w-full mt-15 sm:mt-25 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, x: -100, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="sm:w-1/2 px-4 leading-8 relative"
-        >
-          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/30 shadow-2xl hover:shadow-sky-500/10 transition-all duration-500 hover:border-sky-500/30">
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 to-blue-500/5 rounded-2xl opacity-0 hover:opacity-100 transition-opacity duration-500" />
-            <p className="relative z-10 text-gray-200">
-              <span className="text-sky-400 font-semibold">Olá!</span> Me chamo Cauan Silva Lagrotta, tenho 18 anos e estou estudando
-              <span className="text-sky-300 font-medium"> Desenvolvimento Web Fullstack</span>. Tenho experiência em projetos usando
-              HTML, CSS, JavaScript, React, Node.js, MySQL e muito mais. Estou em
-              constante aprendizado e desenvolvo projetos para colocar em prática
-              tudo o que aprendo. Atualmente, estou buscando oportunidades de
-              <span className="text-sky-300 font-medium"> estágio</span> para ganhar experiência e contribuir com o desenvolvimento de
-              soluções inovadoras.
-            </p>
-          </div>
-        </motion.div>
+      <TextAnimate
+        animation="slideUp"
+        duration={0.9}
+        by="word"
+        className="text-gray-400 text-base md:text-xl px-12 md:ml-12 md:mt-7 md:w-4xl"
+      >
+        Criando experiências digitais excepcionais com código limpo e design
+        moderno. Desenvolvedor Full-Stack apaixonado por criar experiências
+        digitais excepcionais que fazem a diferença.
+      </TextAnimate>
 
-        <motion.div
-          initial={{ opacity: 0, x: 100, y: 50 }}
-          animate={{ opacity: 1, x: 0, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-          className="px-4 leading-8 mt-15 sm:mt-0"
-        >
-          {/* Losango com as hard e soft skills */}
-          <Lozengue />
-        </motion.div>
+      <div className="flex flex-col md:flex-row items-center mt-15 gap-5">
+        <Link to="/projects">
+          <Button className="w-72 h-16 bg-gradient-to-r from-violet-900 to-sky-800 cursor-pointer brightness-100">
+            Ver projetos <ArrowRightIcon />
+          </Button>
+        </Link>
+
+        <div className="flex flex-row">
+          <a
+            href="./public/cauanlagrotta-curriculo-pt-br.pdf"
+            download="cauan-lagrotta-curriculo.pdf"
+          >
+            <Button className="w-72 h-16 cursor-pointer">
+              Baixar Currículo
+              <ArrowCircleDownIcon className="size-6" />
+            </Button>
+          </a>
+        </div>
       </div>
-      
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center text-sky-400/70"
+
+      <div className="flex pt-10 gap-10 ">
+        <a
+          href="https://github.com/CauanLagrotta"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:bg-violet-300/10 p-3 hover:p-3 rounded-full transition-all duration-200 flex flex-col items-center"
         >
-          <span className="text-sm mb-2">Explore mais</span>
-          <ArrowDownIcon size={24} />
-        </motion.div>
-      </motion.div>
+          <GithubLogoIcon size={32} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/cauan-silva-lagrotta/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:bg-violet-300/10 p-3 hover:p-3 rounded-full transition-all duration-200 flex flex-col items-center"
+        >
+          <LinkedinLogoIcon size={32} />
+        </a>
+
+        <a
+          href="https://mail.google.com/mail/u/0/?fs=1&to=cauanlagrotta.dev@gmail.com&tf=cm"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:bg-violet-300/10 p-3 hover:p-3 rounded-full transition-all duration-200 flex flex-col items-center"
+        >
+          <EnvelopeSimpleIcon size={32} />
+        </a>
+      </div>
     </div>
   );
-};
+}
