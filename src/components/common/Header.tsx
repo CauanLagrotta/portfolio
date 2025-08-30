@@ -1,23 +1,34 @@
-import { XIcon, ListIcon } from "@phosphor-icons/react";
+import {
+  XIcon,
+  ListIcon,
+  UserIcon,
+  SuitcaseIcon,
+  ChatTextIcon,
+} from "@phosphor-icons/react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { HouseIcon } from "@phosphor-icons/react";
 
 const items = [
   {
     title: "Home",
     url: "/",
+    icon: HouseIcon,
   },
   {
     title: "Sobre mim",
     url: "/about",
+    icon: UserIcon,
   },
   {
     title: "Projetos",
     url: "/projects",
+    icon: SuitcaseIcon,
   },
   {
     title: "Contato",
     url: "/contact",
+    icon: ChatTextIcon,
   },
 ];
 
@@ -29,7 +40,6 @@ export const Header = () => {
   };
 
   return (
-
     <header className="mb-10 w-full fixed z-20">
       <div className="hidden md:flex">
         <nav className="bg-gray-900 h-20 w-full flex justify-center gap-16">
@@ -76,7 +86,9 @@ export const Header = () => {
                 }`
               }
             >
-              {item.title}
+              <span className="flex gap-4">
+                <item.icon size={22} /> {item.title}
+              </span>
             </NavLink>
           ))}
         </nav>

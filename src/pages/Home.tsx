@@ -60,7 +60,7 @@ export function Home() {
 
         <div className="flex flex-row">
           <a
-            href="./public/cauanlagrotta-curriculo-pt-br.pdf"
+            href="/cauanlagrotta-curriculo-pt-br.pdf"
             download="cauan-lagrotta-curriculo.pdf"
           >
             <Button className="w-72 h-16 cursor-pointer">
