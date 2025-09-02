@@ -7,6 +7,7 @@ import {
 } from "@/components/magicui/terminal";
 import { hardSkills, softSkills } from "./skills-data";
 import * as motion from "motion/react-client";
+import Image from "next/image";
 
 export function SectionSkills() {
   const [sectionActive, setSectionActive] = useState<"hard" | "soft">("soft");
@@ -59,8 +60,11 @@ export function SectionSkills() {
                 key={index}
                 className="flex flex-col items-center justify-center mt-8"
               >
-                <img
+                <Image
                   src={item.img}
+                  alt={item.name}
+                  width={500}
+                  height={500}
                   className="size-10 md:size-12 rounded-lg hover:shadow-2xl hover:shadow-black hover:scale-125 duration-200"
                 />
                 <p className="text-gray-500 text-sm md:text-">{item.name}</p>
