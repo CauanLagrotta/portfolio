@@ -53,7 +53,7 @@ export const projectsData: ProjectData[] = [
     title: "To-Do List",
     description:
       "Lista de tarefas interativa com salvamento no LocalStorage, permitindo adicionar, remover e marcar como concluídas.",
-    image: "/assets/project_images/todolist.jfif",
+    image: "/assets/project_images/todolist.png",
     deploy: "https://todolist-omega-henna.vercel.app",
     github: "https://github.com/CauanLagrotta/todolist.git",
     featured: false,
