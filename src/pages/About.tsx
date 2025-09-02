@@ -2,6 +2,7 @@ import * as motion from "motion/react-client";
 import workspace from "/assets/workspace.png";
 import { SectionSkills } from "@/components/about/section-skills";
 import { CodeIcon, CoffeeIcon, HammerIcon } from "@phosphor-icons/react";
+import { AuroraText } from "@/components/magicui/aurora-text";
 
 export function About() {
   const dayOfBirth = 6;
@@ -20,9 +21,12 @@ export function About() {
   return (
     <div className="z-10 w-full">
       <div className="flex flex-col items-center pt-30 pb-10">
-        <h2 className="text-3xl lg:text-4xl text-sky-600 self-start mb-6 sm:mb-8 ml-4 sm:ml-10">
+        <AuroraText
+          colors={["#1f68c7", "#991ee0"]}
+          className="text-5xl font-extrabold text-sky-600 mb-8"
+        >
           Sobre mim
-        </h2>
+        </AuroraText>
 
         <div className="flex flex-col md:flex-row-reverse items-center gap-6 sm:gap-10 px-4">
           <motion.div
@@ -65,9 +69,7 @@ export function About() {
               <CodeIcon className="text-sky-600 size-10 md:size-12" />
             </span>
             <h4 className="text-2xl font-semibold">+50</h4>
-            <p className="text-gray-400 text-md">
-              Projetos
-            </p>
+            <p className="text-gray-400 text-md">Projetos</p>
           </div>
 
           <div className="hover:scale-110 border-2 border-transparent hover:border-sky-600 duration-200 flex justify-center items-center flex-col gap-3 bg-gray-800 rounded-lg p-10 shadow-2xl drop-shadow-black">
@@ -75,9 +77,7 @@ export function About() {
               <HammerIcon className="text-sky-600 size-10 md:size-12" />
             </span>
             <h4 className="text-2xl font-semibold">+10</h4>
-            <p className="text-gray-400 text-md">
-              Tecnologias e ferramentas
-            </p>
+            <p className="text-gray-400 text-md">Tecnologias e ferramentas</p>
           </div>
 
           <div className="hover:scale-110 border-2 border-transparent hover:border-sky-600 duration-200 flex justify-center items-center flex-col gap-3 bg-gray-800 rounded-lg p-10 shadow-2xl drop-shadow-black">
@@ -85,9 +85,7 @@ export function About() {
               <CoffeeIcon className="text-sky-600 size-10 md:size-12" />
             </span>
             <h4 className="text-2xl font-semibold">∞</h4>
-            <p className="text-gray-400 text-md">
-              Cafés
-            </p>
+            <p className="text-gray-400 text-md">Cafés</p>
           </div>
         </div>
 
